@@ -61,9 +61,8 @@ jobs:
           push: true
           build-args: |
             "NEXT_PUBLIC_APP_VERSION=${{ steps.previoustag.outputs.tag }}"
-          tags: |
-            ${{ secrets.DOCKER_USERNAME }}/ztnet-ext:latest
-            ${{ secrets.DOCKER_USERNAME }}/ztnet-ext:${{ steps.extract_version.outputs.version_number }}
+          tags: screendisease/ztnet-ext:latest
+            #${{ secrets.DOCKER_USERNAME }}/ztnet-ext:${{ steps.extract_version.outputs.version_number }}
 
       # - uses: "marvinpinto/action-automatic-releases@latest"
       #   with:
