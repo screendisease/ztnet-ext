@@ -6,7 +6,7 @@ name: Build release image
 on:
   push:
     tags:
-      - "v0.5.11"
+      - "v*"
 
   # trigger workflow manually
   workflow_dispatch:
