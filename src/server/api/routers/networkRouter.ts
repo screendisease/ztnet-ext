@@ -154,10 +154,10 @@ export const networkRouter = createTRPCRouter({
 				where: {
 					nwid: input.nwid,
 					deleted: false,
-					NOT:{
+					NOT: {
 						name: {
 							endsWith: 'MAP',
-      						},
+						},
 					},
 				},
 			});
