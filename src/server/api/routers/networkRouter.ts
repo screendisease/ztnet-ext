@@ -158,7 +158,7 @@ export const networkRouter = createTRPCRouter({
 					{
       						name: 
 						{
-        						startsWith: 'MAP',
+        						endsWith: 'MAP',
       						},
 					},
 				},
