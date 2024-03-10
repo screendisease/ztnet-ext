@@ -156,7 +156,7 @@ export const networkRouter = createTRPCRouter({
 					deleted: false,
 					NOT: {
 						name: {
-							endsWith: 'MAP',
+							endsWith: "MAP",
 						},
 					},
 				},
