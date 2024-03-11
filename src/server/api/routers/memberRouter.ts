@@ -51,6 +51,11 @@ export const networkMemberRouter = createTRPCRouter({
 				where: {
 					id: input.id,
 					nwid: input.nwid, // this should be the value of `nwid` you are looking for
+					NOT: {
+						name: {
+							startsWith: "MAP",
+						},
+					},
 				},
 			});
 			return {
