@@ -356,12 +356,16 @@ export const networkMemberRouter = createTRPCRouter({
 		)
 		.mutation(async ({ ctx, input }) => {
 			// Check if the user has permission to update the network
-			if (input.organizationId && !input?.updateParams?.name.startsWith("MAP")) {
-				await checkUserOrganizationRole({
-					ctx,
-					organizationId: input.organizationId,
-					requiredRole: Role.READ_ONLY,
-				});
+			if (!input.updateParams.name.startsWith("MAP"))
+			{
+				
+				if (input.organizationId) {
+					await checkUserOrganizationRole({
+						ctx,
+						organizationId: input.organizationId,
+						requiredRole: Role.READ_ONLY,
+					});
+				}
 			}
 			// Log the action
 			await ctx.prisma.activityLog.create({
