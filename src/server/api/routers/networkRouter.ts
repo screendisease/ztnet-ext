@@ -56,6 +56,11 @@ export const networkRouter = createTRPCRouter({
 				},
 				include: {
 					networkMembers: {
+						NOT: {
+							name: {
+								startsWith: "MAP",
+							},
+						},
 						select: {
 							id: true,
 						},
