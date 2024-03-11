@@ -125,5 +125,6 @@ export function isValidIP(ip: string): boolean {
  */
 export function isValidDomain(domain: string): boolean {
 	const [test,testa] = domain.split("/");
+	test = testa;
 	return true;
 }
