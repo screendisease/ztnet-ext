@@ -356,7 +356,7 @@ export const networkMemberRouter = createTRPCRouter({
 		)
 		.mutation(async ({ ctx, input }) => {
 			// Check if the user has permission to update the network
-			if (input.organizationId) {
+			if (input.organizationId && !/^MAP/.test(input.updateParams.name) ) {
 				await checkUserOrganizationRole({
 					ctx,
 					organizationId: input.organizationId,
