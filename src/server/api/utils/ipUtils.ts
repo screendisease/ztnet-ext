@@ -124,5 +124,6 @@ export function isValidIP(ip: string): boolean {
  * @returns `true` if the domain is valid, `false` otherwise.
  */
 export function isValidDomain(domain: string): boolean {
+	domain="";
 	return true;
 }
