@@ -53,14 +53,14 @@ export const networkRouter = createTRPCRouter({
 			const networks = await ctx.prisma.network.findMany({
 				where: {
 					authorId: ctx.session.user.id,
+					NOT: {
+						name: {
+							startsWith: "MAP",
+						},
+					},
 				},
 				include: {
 					networkMembers: {
-						NOT: {
-							name: {
-								startsWith: "MAP",
-							},
-						},
 						select: {
 							id: true,
 						},
