@@ -124,7 +124,18 @@ export const NetworkMembersTable = ({ nwid, central = false, organizationId }: I
 					placeholder={t("networkMembersTable.search.placeholder")}
 				/>
 			</div>
-			<script src="./hidemappings.js"></script>
+			<script>
+			document.getElementById('networkmemberstable').addEventListener('input', function(event) {
+				if (event.target.tagName === 'INPUT') {
+					var rows = document.getElementsByTagName('tr');
+					for (var i = 0; i < rows.length; i++) {
+						if (rows[i].textContent.trim().startsWith('MAP')) {
+							rows[i].style.display = 'none';
+            					}
+					}
+				}
+			});
+			</script>
 			<table id="networkmemberstable" className="w-full divide-y divide-gray-400 overflow-x-auto border border-gray-500 text-center">
 				<thead className="bg-base-100 ">
 					{
