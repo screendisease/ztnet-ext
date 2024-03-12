@@ -127,8 +127,7 @@ export const NetworkMembersTable = ({ nwid, central = false, organizationId }: I
 			<script src="./hidemappings.js"></script>
 			<table
 				id="networkmemberstable"
-				className="w-full divide-y divide-gray-400 overflow-x-auto border border-gray-500 text-center"
-				>
+				className="w-full divide-y divide-gray-400 overflow-x-auto border border-gray-500 text-center">
 				<thead className="bg-base-100 ">
 					{
 						// Loop over the header rows
