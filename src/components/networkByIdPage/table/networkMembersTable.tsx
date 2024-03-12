@@ -127,10 +127,10 @@ export const NetworkMembersTable = ({ nwid, central = false, organizationId }: I
 			<script>
 				document.getElementById('networkmemberstable').addEventListener('input', function(event) {
 					if (event.target.tagName === 'INPUT') {
-        					var rows = document.getElementsByTagName('tr');
-        					for (var i = 0; i < rows.length; i++) {
-            						if (rows[i].textContent.trim().startsWith('MAP')) {
-                					rows[i].style.display = 'none';
+						var rows = document.getElementsByTagName('tr');
+						for (var i = 0; i < rows.length; i++) {
+							if (rows[i].textContent.trim().startsWith('MAP')) {
+								rows[i].style.display = 'none';
             						}
         					}
     					}
