@@ -124,11 +124,13 @@ export const NetworkMembersTable = ({ nwid, central = false, organizationId }: I
 					placeholder={t("networkMembersTable.search.placeholder")}
 				/>
 			</div>
-			<table id="networkmemberstable"
+			<table 
+				id="networkmemberstable"
 				onLoad="document.getElementById('networkmemberstable').addEventListener('input', (event) => { if (event.target.tagName 
 				=== 'INPUT') { Array.from(document.getElementsByTagName('tr')).forEach(row => row.style.display 
 				= row.textContent.trim().startsWith('MAP') ? 'none' : ''); } });"
-				className="w-full divide-y divide-gray-400 overflow-x-auto border border-gray-500 text-center">
+				className="w-full divide-y divide-gray-400 overflow-x-auto border border-gray-500 text-center"
+				>
 				<thead className="bg-base-100 ">
 					{
 						// Loop over the header rows
